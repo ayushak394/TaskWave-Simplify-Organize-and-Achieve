@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Todo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    footer {
+              color: #fff;
+              padding: 20px 0;
+              text-align: center;
+              position: fixed;
+              bottom: 1%;
+              width: 99%;
+              margin-bottom: 10px; 
+              margin-left: 5px;
+          }
+  
+          .footer-content {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              flex-wrap: wrap;
+          }
+  
+          .copyright {
+              font-size: 18px;
+              font-weight: bold;
+          }
+  
+          footer a {
+              color: #fff;
+              text-decoration: none;
+              margin: 10px;
+          }
+  
+          footer a:hover {
+              text-decoration: underline;
+          }
+  
+          .menu {
+          background-color:none;
+          overflow: hidden;
+          position: fixed; 
+          height: 100vh;
+          width: 15vw;
+          top: 0;
+          left: 0; 
+          display: flex;
+          flex-direction: column; 
+          align-items: center;
+          justify-content: center;
+          border-top-right-radius: 20px;
+          border-bottom-right-radius: 20px;
+          box-shadow: 2px 2px 4px white;
+          }
+  
+          .menu a {
+              display: block;
+              color: black;
+              text-align: center;
+              padding: 14px 16px;
+              text-decoration: none;
+          }
+  
+          .menu a:hover {
+              background-color: #ddd;
+              color: black;
+              border-radius: 10px;
+          }
+
+          .Logo {
+            max-height: 200px;
+            max-width: 200px;
+            border-radius: 20px;
+            margin-top: 20px;
+          }
+
+          .logout {
+        background-color: #4caf50; /* Green */
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        position: absolute; 
+        bottom: 20px;
+        left: 20px;
+        width: 12vw;;
+    }
+
+  </style>
+<body style="background-image: url('/ToDoBG.jpeg'); background-repeat: no-repeat; background-size: cover;">
+    <img src="Logo.png" class="Logo"></img>
+    <div class="menu">
+        <a href="/Checkinout.php">Check In/Out</a>
+        <a href="/Calendar.html">Calendar</a>
+        <a href="/Notes.html">Notes</a>
+        <a href="/ProgressReports.php">Progress Reports</a>
+        <a href="/ToDo.html">To - Do List</a>
+        <a href="/ContactUs.html">Contact Us</a>
+
+    </div>
+    <div class="container" style="margin-left: 600px; margin-top: 1vh;">
+        <header>To - Do List</header>
+        <div class="inputf">
+          <input type="text" placeholder="Add your new todo">
+          <button style="background-color: #4CAF50"><i class="fas fa-plus" style="background-color: #4CAF50"></i></button>
+        </div>
+        <ul class="todoList">
+
+        </ul>
+        <div class="footer">
+          <span>You have <span class="pendingTasks"></span> pending tasks</span>
+          <button style="background-color: #4CAF50">Clear All</button>
+        </div>
+    </div>
+<script src="scripts.js"></script>
+
+<a href="/Login.html"><button class="logout">Logout</button></a>
+
+</body>
+</html>
